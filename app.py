@@ -17,11 +17,16 @@ def favicon():
                                'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 @app.route('/hello', methods=['POST'])
+def hello():
+   name = request.form.get('name')
 
-# Ce code affiche "Hello, world!" lorsque vous exécutez l'application
+   if name:
+       print('Request for hello page received with name=%s' % name)
+       return render_template('hello.html', name = name)
+   else:
+       print('Request for hello page received with no name or blank name -- redirecting')
+       return redirect(url_for('index'))
 
-def main():
-    print("Hello, world!")
 
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+   app.run()
