@@ -4,9 +4,6 @@ from flask import (Flask, redirect, render_template, request,
                    send_from_directory, url_for)
 
 app = Flask(__name__)
-app.config.from_object(__name__)
-app.config['SECRET_KEY'] = 'un_secret_tres_secret'  # Devrait être un secret aléatoire
-app.config['SESSION_TYPE'] = 'filesystem'
 
 @app.route('/')
 def index():
