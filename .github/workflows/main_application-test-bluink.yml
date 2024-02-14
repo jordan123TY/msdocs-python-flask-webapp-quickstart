@@ -66,4 +66,4 @@ jobs:
         with:
           app-name: 'Application-test-bluink'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AA4B10A60133418880F243F4484D8AE3 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C778685E47DB4E5A889D9518A69FD675 }}
